@@ -16,8 +16,8 @@ public class Carga extends Aviones {
     private double pesoAct = 0;
     private final ArrayList<Paquete> paquetes = new ArrayList<>();
 
-    public Carga(double pesoMax, int velocidad, String matricula) {
-        super(velocidad, matricula);
+    public Carga(double pesoMax, int velocidad, String matricula, String hora, String destino) {
+        super(velocidad, matricula,hora,destino);
         this.pesoMax = pesoMax;
     }
 
@@ -33,7 +33,8 @@ public class Carga extends Aviones {
 
     @Override
     public void Visualisar() {
-        System.out.println("Avión de carga matrícula: " + this.getMatricula() + ", capacidad: " + this.pesoMax + "Kg velocidad:" + this.getVelocidad()+" Km/h, contiene:");
+        System.out.println("Avión de carga matrícula: " + this.getMatricula() + ", capacidad: " + this.pesoMax + "Kg velocidad:" + this.getVelocidad()+" Km/h");
+       System.out.println("Hora de Partida: "+this.getHora()+"     Destino: "+this.getDestino()+"\nContenido: ");
         paquetes.forEach((auxPaq) -> {
             System.out.println(auxPaq.toString());
         });
