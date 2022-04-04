@@ -16,8 +16,8 @@ public class AgenciaAviones {
      */
     public static void main(String[] args) {
         Inventario in = new Inventario();
-        Comercial av1 = new Comercial(4,350, "HK345");
-        Carga c1 = new Carga(320000, 250, "N7224N");
+        Comercial av1 = new Comercial(4,350, "HK345","12:50","New york");
+        Carga c1 = new Carga(320000, 250, "N7224N","19:45","Cali");
         Paquete p = new Paquete("Pera", 120000.0);
         c1.addPaquete(p);
         Paquete p2 = new Paquete("Papa", 150000.0);
