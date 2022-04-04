@@ -16,8 +16,8 @@ public class Comercial extends Aviones {
     private int numPasajeros = 0;
     private final ArrayList<Pasajero> pasajeros = new ArrayList<>();
 
-    public Comercial(int numMaxPasajeros, int velocidad, String matricula) {
-        super(velocidad, matricula);
+    public Comercial(int numMaxPasajeros, int velocidad, String matricula,String origen, String destino) {
+        super(velocidad, matricula,origen,destino);
         this.numMaxPasajeros = numMaxPasajeros;
     }
 
@@ -34,6 +34,7 @@ public class Comercial extends Aviones {
     @Override
     public void Visualisar() {
         System.out.println("Avión comercial matrícula: " + this.getMatricula() + ", capacidad: " + this.numMaxPasajeros + ", Velocidad: " + this.getVelocidad() + " Km/h");
+        System.out.println("Hora de Partida: "+this.getHora()+"     Destino: "+this.getDestino());
         pasajeros.forEach((auxpas) -> {
             System.out.println(auxpas.toString());
         });
